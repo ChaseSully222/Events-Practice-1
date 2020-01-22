@@ -29,3 +29,8 @@
     padding: 5px;
     margin: 5px;
   }
+
+  .wrap {
+      display:flex;
+      flex-direction: row;
+  }
