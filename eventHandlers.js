@@ -1,4 +1,4 @@
-const outputEl = document.getElementById("output-target")
+let outputEl = document.getElementById("output-target")
 
 /*
     You can get a reference to DOM elements and
@@ -9,8 +9,8 @@ const outputEl = document.getElementById("output-target")
     fires, the attached "handleSectionClick"
     function gets executed.
  */
-const articleEl = document.getElementsByClassName("article-section")
-const header = document.querySelector("#page-header")
+let articleEl = document.getElementsByClassName("article-section")
+let header = document.querySelector("#page-header")
 
 /*
     JavaScript, in the browser, automatically send the source
@@ -51,7 +51,7 @@ header.addEventListener("mouseout", handleHeaderMouseOut)
     in the addEventListener declaration instead of using a
     function reference.
  */
-const fieldEl = document.getElementById("keypress-input")
+let fieldEl = document.getElementById("keypress-input")
 
 fieldEl.addEventListener("keyup", function (event) {
     outputEl.innerHTML = event.target.value
@@ -102,4 +102,13 @@ document.getElementById("add-rounding").addEventListener("click", function() {
  */
 document.querySelector("body").addEventListener("click", function(event) {
     console.log("You clicked on the body of the DOM")
+})
+
+const redArticleEl = document.getElementById("redArticle")
+const blueArticleEl = document.getElementById("blueArticle")
+const tacoEl = document.getElementById("message")
+
+tacoEl.addEventListener("keyup", function (event) {
+    redArticleEl.innerHTML = event.target.value
+    blueArticleEl.innerHTML = event.target.value
 })
